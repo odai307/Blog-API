@@ -88,6 +88,23 @@ const getPostById = async (id) => {
     }
 }
 
+
+const getPostByTitle = async (title) => {
+    try {
+        const result = await pool.query(`
+            SELECT p.id, p.title, p.content, p.published, p.created_at, p.updated_at,
+                    u.first_name, u.last_name
+            FROM posts p
+            JOIN users u ON p.user_id = u.id
+            WHERE p.title = $1`,
+        [title]);
+        return result.rows[0];
+    } catch (err) {
+        console.error('Error getting post by id', err);
+        throw err;
+    }
+}
+
 // Update a post
 const updatePost = async (id, title, content, published=false) => {
     try {
@@ -147,6 +164,7 @@ module.exports = {
     getAllPublishedPosts,
     getAllUnpublishedPosts,
     getPostById,
+    getPostByTitle,
     updatePost,
     togglePublish,
     deletePost

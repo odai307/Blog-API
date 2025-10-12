@@ -9,6 +9,13 @@ const createPost = async (req, res) => {
     title = title.trim();
 
     try {
+        const existingPostTitle = await postModel.getPostByTitle(title);
+
+        if (existingPostTitle) return res.status(400).json({
+            success: false,
+            error: 'A post with this title already exists'
+        });
+        
         const newPost = await postModel.createPost(userId, title, content, published);
 
         return res.status(201).json({

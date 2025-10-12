@@ -1,0 +1,426 @@
+/* Dashboard Container */
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+}
+
+/* Header Section */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+    background: rgb(0, 26, 255);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.admin-name {
+    color: black;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.logout-btn {
+    background: rgb(255, 115, 0);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+.logout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+}
+
+/* Actions Section */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.actions button {
+    background: rgb(0, 26, 255);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.filter-select {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+    background-color: white;
+    color: #2d3748;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.filter-select:hover {
+    border-color: #667eea;
+}
+
+.filter-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Table Container */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+thead {
+    background: rgb(0, 26, 255);
+}
+
+th {
+    padding: 18px 20px;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Table Body */
+tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 20px;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+/* Clickable Row */
+tr.clickable-row {
+    cursor: pointer;
+}
+
+tr.clickable-row:hover {
+    background: linear-gradient(90deg, #f7fafc 0%, #edf2f7 100%);
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Links */
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+.delete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+/* Loading & Error States */
+.dashboard p {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+    color: #fff;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Status Badge */
+td:nth-child(4) {
+    font-weight: 600;
+}
+
+/* Published Status Colors */
+tbody tr td:nth-child(4) {
+    color: #48bb78;
+}
+
+tbody tr:has(td:nth-child(4):contains("No")) td:nth-child(4) {
+    color: #f56565;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 20px 10px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .dashboard h1 {
+        font-size: 24px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .actions button,
+    .filter-select {
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 12px 8px;
+    }
+
+    .delete-btn {
+        margin-left: 8px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Container */
+.modal {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 480px;
+    max-width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Modal Header */
+.modal h3 {
+    margin: 0 0 16px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.modal h3::before {
+    content: '⚠️';
+    font-size: 32px;
+}
+
+/* Modal Content */
+.modal p {
+    margin: 0 0 30px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* Cancel Button */
+.cancel-btn {
+    background: #e2e8f0;
+    color: #2d3748;
+    border: 2px solid transparent;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background: #cbd5e0;
+    transform: translateY(-2px);
+}
+
+.cancel-btn:active {
+    transform: translateY(0);
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.delete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+}
+
+.delete-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal {
+        padding: 30px 25px;
+        width: 95%;
+    }
+
+    .modal h3 {
+        font-size: 24px;
+    }
+
+    .modal h3::before {
+        font-size: 28px;
+    }
+
+    .modal p {
+        font-size: 15px;
+    }
+
+    .modal-actions {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .cancel-btn,
+    .delete-btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+}
