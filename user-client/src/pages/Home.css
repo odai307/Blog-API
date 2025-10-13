@@ -1,0 +1,17 @@
+.home {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.home h1 {
+    text-align: center;
+    color: #1a202c;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
