@@ -231,5 +231,3 @@ You can then log in through the Admin frontend to manage posts.
 **Gabriel Afotey**
 📧 [gabrielafotey@gmail.com](mailto:gabrielafotey@gmail.com)
 GitHub: [@odai307](https://github.com/odai307)
-
-```
