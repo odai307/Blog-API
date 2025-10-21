@@ -226,33 +226,10 @@ You can then log in through the Admin frontend to manage posts.
 
 ---
 
-## 🧾 Example Posts
-
-### 1️⃣ “Why TypeScript Is Changing the Way We Write JavaScript”
-
-> Explore how TypeScript brings static typing, improved maintainability, and developer confidence to modern JavaScript projects.
-
-### 2️⃣ “AI-Powered Development: How Generative Models Are Transforming Coding”
-
-> A deep dive into how AI models like GPT and Copilot are reshaping software development workflows and boosting productivity.
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
 ## ❤️ Author
 
 **Gabriel Afotey**
 📧 [gabrielafotey@gmail.com](mailto:gabrielafotey@gmail.com)
 GitHub: [@odai307](https://github.com/odai307)
 
-```
-
----
-
-Would you like me to make it auto-format properly (with emojis, bold headers, and line spacing optimized for GitHub’s dark mode)? It’ll look cleaner and more professional on your GitHub repo page.
 ```
