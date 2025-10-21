@@ -4,7 +4,9 @@ const app = express();
 const cors = require('cors');
 
 app.use(cors({
-  origin: ['http://127.0.0.1:5174', 'http://127.0.0.1:5173'],
+  origin: process.env.FRONTEND_URLS 
+    ? process.env.FRONTEND_URLS.split(',').map(url=> url.trim())
+    : [],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
